@@ -50,7 +50,7 @@ echo "╟\n";
 $y = 1;
 while($y <= $batas)
 {
-    echo '╟> '.$init->AzSpam($url,$msg);
+    echo '╟> '.$init->AzSpam($url,$msg,$subjek);
     echo "\n";
     echo "╟\n";
     if($y == $batas){
