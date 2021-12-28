@@ -1,7 +1,7 @@
 <?php
 class AzThuFan {
 
-function AzSpam($url,$msg){
+function AzSpam($url,$msg,$subjek){
     global $y;
 
         $asedekon = array(
