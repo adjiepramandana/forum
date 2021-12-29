@@ -32,9 +32,6 @@ $url = trim(fgets(STDIN));
 echo "╟> Subjek  -> ";
 $subjek = trim(fgets(STDIN));
 
-echo "╟> Message  -> ";
-$msg = trim(fgets(STDIN));
-
 echo "╟> Amount  -> ";
 $batas = trim(fgets(STDIN));
 echo "╟\n";
@@ -50,9 +47,8 @@ echo "╟\n";
 
 for($y = 1; $y <= $batas; $y++)
 {
-    sleep(2);
-    echo '╟> '.$init->AzSpam($url,$msg,$subjek);
-    sleep(2);
+    echo '╟> '.$init->AzSpam($url,$subjek);
+    echo '<script type="text/JavaScript"> location.reload(); </script>';
     echo "\n";
     echo "╟\n";
     if($y == $batas){
