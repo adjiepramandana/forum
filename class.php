@@ -3,18 +3,13 @@ class AzThuFan {
 
 function AzSpam($url,$msg,$subjek){
     global $y;
-
-        $asedekon = array(
-            'pesan'=>$msg,
-            'subjek'=>$subjek
-        );
-
-        $samalusemua = http_build_query($asedekon);
-
+    
+        $data = "pesan=".$msg."&subjek=".$subjek;
+    
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,$samalusemua);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
         curl_setopt($ch, CURLOPT_HEADER, 1);
