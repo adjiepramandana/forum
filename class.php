@@ -1,10 +1,10 @@
 <?php
 class AzThuFan {
 
-function AzSpam($url,$msg,$subjek){
+function AzSpam($url,$subjek){
     global $y;
     
-        $data = "pesan=".$msg."&subjek=".$subjek;
+        $data = "subjek=".$subjek;
     
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$url);
