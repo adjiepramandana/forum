@@ -1,7 +1,7 @@
 <?php
-class AzThuFan {
+class Beraksi {
 
-function AzSpam($url,$subjek){
+function indie($url,$subjek){
     global $y;
     
         $data = "subjek=".$subjek;
@@ -24,18 +24,22 @@ function AzSpam($url,$subjek){
         if($status == 0 || $status == 404)
         {
         return "[☠] ➝ Website Down「".$status."」Spam To ".$y." 「Failed」 \n";
+        die("Stopping Procces");
         }
         if($status == 502 || $status == 504 || $status == 500)
         {
         return "[✘] ➝ Gateway Timeout 「".$status."」Spam To ".$y."「Failed」 \n";
+        die("Stopping Procces");
         }
         if($status == 302 || $status == 301 || $status == 307)
         {
         return "[➡️] ➝ Redirect「".$status."」Spam To ".$y."「Failed」 \n";
+        die("Stopping Procces");
         }
         if($status == 100 || $status == 101 || $status == 417 || $status == 505 || $status == 522 || $status == 400)
         {
         return "[✘] ➝ Error 「".$status."」Spam To ".$y."「Failed」 \n";
+        die("Stopping Procces");
         }
     }
 }
