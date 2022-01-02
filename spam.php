@@ -36,18 +36,13 @@ echo "╟\n";
 echo "╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤\n";
 echo "╟\n";
 sleep(2);
-$a = gethostbyname($url);
-$replace = array(
-   "https",
-   "http",
-   ":",
-   "/"
-);
-$d = str_replace($replace,$a);
+$d = str_replace("https://", "http://", $url);
+$a = gethostbyname($d);
 echo "╟> Url IP $a \n";
 
 echo "╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤\n";
 echo "╟\n";
+sleep(2);
 
 echo "╟> Subjek  -> ";
 $subjek = trim(fgets(STDIN));
