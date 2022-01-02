@@ -39,9 +39,10 @@ $a = gethostbyname($url);
 $replace = array(
    "https",
    "http",
+   ":"
    "/"
 );
-$d = str_replace_assoc($replace,$a);
+$d = str_replace($replace,$a);
 echo "╟> Url IP $a \n";
 
 echo "╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤\n";
