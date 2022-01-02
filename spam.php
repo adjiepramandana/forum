@@ -36,8 +36,9 @@ echo "╟\n";
 echo "╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤\n";
 echo "╟\n";
 sleep(2);
-$d = str_replace("https://", "http://", $url);
-$a = gethostbyname($d);
+$removeChar = ["https://", "http://", "/"];
+$r = str_replace($removeChar, "", $url);
+$a = gethostbyname($r);
 echo "╟> Url IP $a \n";
 
 echo "╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤\n";
@@ -64,12 +65,6 @@ while($y <= $batas)
 {
    sleep(6);
     echo '╟> '.$init->indie($url,$subjek);
-    if($status == 200){
-
-    }else{
-       echo "STOPPING PROCCESS";
-       die();
-    }
     echo "\n";
     echo "╟\n";
     if($y == $batas){
