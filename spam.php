@@ -40,7 +40,7 @@ $a = gethostbyname($url);
 $replace = array(
    "https",
    "http",
-   ":"
+   ":",
    "/"
 );
 $d = str_replace($replace,$a);
