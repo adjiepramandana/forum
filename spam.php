@@ -1,6 +1,6 @@
 <?php
 include 'class.php';
-$init = new HOOH;
+$init = new Beraksi;
 echo
 " 
 ▄████████ ███    █▄     ▄████████  ▄█          ▄█   ▄█▄  ▄█   ▄█        ▄█          ▄████████    ▄████████ 
