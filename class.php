@@ -11,7 +11,7 @@ function indie($url,$subjek){
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATIOAN, false);
         curl_setopt($ch, CURLOPT_HEADER, 1);
 
         $exec = curl_exec($ch);
@@ -25,21 +25,25 @@ function indie($url,$subjek){
         {
         return "[☠] ➝ Website Down「".$status."」Spam To ".$y." 「Failed」 \n";
         die("Stopping Procces");
+        exit(0);
         }
         if($status == 502 || $status == 504 || $status == 500)
         {
         return "[✘] ➝ Gateway Timeout 「".$status."」Spam To ".$y."「Failed」 \n";
         die("Stopping Procces");
+        exit(0);
         }
         if($status == 302 || $status == 301 || $status == 307)
         {
         return "[➡️] ➝ Redirect「".$status."」Spam To ".$y."「Failed」 \n";
         die("Stopping Procces");
+        exit(0);
         }
         if($status == 100 || $status == 101 || $status == 417 || $status == 505 || $status == 522 || $status == 400)
         {
         return "[✘] ➝ Error 「".$status."」Spam To ".$y."「Failed」 \n";
         die("Stopping Procces");
+        exit(0);
         }
     }
 }
